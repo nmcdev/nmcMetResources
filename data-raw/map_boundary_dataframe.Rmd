@@ -1,0 +1,84 @@
+---
+title: Prepare map boundary dataframe.
+author: Kan Dai
+---
+
+  Extract the coordinates from the the shape files into a data frame and plot lines for speed up the plotting of polygons in r (the first method) [http://gis.stackexchange.com/questions/62292/how-to-speed-up-the-plotting-of-polygons-in-r].
+
+```{r message=FALSE, warning=FALSE}
+# Convert the polygons into data frames so we can make lines.
+# Extract the coordinates from the shape files to get the
+#   longitude and latitudes of the polygons. Then we can
+#   put them into a data frame with the first column containing
+#   the longitudes and the second column containing latitudes.
+#   The different shapes are separated by NAs.
+poly2df <- function(poly) {
+  # Number of regions
+  n_regions <- length(poly@polygons)
+
+  # Get the coords into a data frame
+  poly_df <- c()
+  for(i in 1:n_regions) {
+
+    # Number of polygons for first region
+    n_poly <- length(poly@polygons[[i]]@Polygons)
+    print(paste("There are",n_poly,"polygons"))
+
+    # Create progress bar
+    # pb <- txtProgressBar(min = 0, max = n_poly, style = 3)
+    for(j in 1:n_poly) {
+      poly_df <- rbind(poly_df, NA,
+                       poly@polygons[[i]]@Polygons[[j]]@coords)
+      # Update progress bar
+      # setTxtProgressBar(pb, j)
+    }
+    #close(pb)
+    print(paste("Finished region",i,"of",n_regions))
+  }
+  poly_df <- data.frame(poly_df)
+  names(poly_df) <- c('lon','lat')
+  return(poly_df)
+}
+
+#
+# convert the China nation, province, county and river boundary to dataframe.
+
+# national boundary
+nationDF <- rgdal::readOGR(usethis::proj_path("inst", "extdata"), "bou1_4p")
+nationGDF <- ggplot2::fortify(nationDF)
+nationDF <- poly2df(nationDF)
+usethis::use_data(nationGDF, overwrite = TRUE)
+usethis::use_data(nationDF, overwrite = TRUE)
+
+# province boundary
+provinceDF <- rgdal::readOGR(usethis::proj_path("inst", "extdata"), "bou2_4p")
+provinceGDF <- ggplot2::fortify(provinceDF)
+provinceDF <- poly2df(provinceDF)
+usethis::use_data(provinceGDF, overwrite = TRUE)
+usethis::use_data(provinceDF, overwrite = TRUE)
+
+# county boundary
+countyDF <- rgdal::readOGR(usethis::proj_path("inst", "extdata"), "BOUNT_poly")
+countyGDF <- ggplot2::fortify(countyDF)
+countyDF <- poly2df(countyDF)
+usethis::use_data(countyGDF, overwrite = TRUE)
+usethis::use_data(countyDF, overwrite = TRUE)
+
+# river 1st class boundary
+river1DF <- rgdal::readOGR(usethis::proj_path("inst", "extdata"), "hyd1_4p")
+river1GDF <- ggplot2::fortify(river1DF)
+river1DF <- poly2df(river1DF)
+usethis::use_data(river1GDF, overwrite = TRUE)
+usethis::use_data(river1DF, overwrite = TRUE)
+
+# river 2nd class boundary
+river2DF <- rgdal::readOGR(usethis::proj_path("inst", "extdata"), "hyd2_4p")
+river2GDF <- ggplot2::fortify(river2DF)
+river2DF <- poly2df(river2DF)
+usethis::use_data(river2GDF, overwrite = TRUE)
+usethis::use_data(river2DF, overwrite = TRUE)
+```
+
+
+
+

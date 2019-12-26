@@ -1,0 +1,29 @@
+---
+title: Prepare station information dataset
+author: Kan Dai
+---
+
+    原始数据来自 国家级地面气象观测站站点基本信息全表（2016）; 将execl文件头去掉, 挑选8列数据; 将极地站的经纬度的S, E, W等改掉.
+```{r}
+# DataPackageR::use_processing_script(file="surface_station_information.Rmd", author="Kan Dai", title="Prepare station information dataset.")
+
+# set column classes
+colClasses <- c("character","numeric","character","character",
+                "numeric","numeric","numeric","numeric")
+
+# set column names
+colNames <- c("province","ID","name","grade","lat","lon","alt","pressureAlt")
+
+# read information
+NWSInfo <- read.csv(usethis::proj_path("inst", "extdata", "NWSInfo.csv"), 
+                    col.names = colNames, header = FALSE,
+                    colClasses = colClasses, stringsAsFactors = FALSE)
+
+# convert logitude and latitude units
+NWSInfo$lon <- floor(NWSInfo$lon/100.)+ (NWSInfo$lon/100.-floor(NWSInfo$lon/100.))/0.6
+NWSInfo$lat <- floor(NWSInfo$lat/100.)+ (NWSInfo$lat/100.-floor(NWSInfo$lat/100.))/0.6
+
+# save data
+usethis::use_data(NWSInfo, overwrite = TRUE)
+```
+

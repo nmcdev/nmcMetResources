@@ -1,0 +1,15 @@
+Package: nmcMetResources
+Title: Data Resources for Meteorological Packages.
+Version: 0.1
+Authors@R: 
+    person(given = "Kan",
+           family = "Dai",
+           role = c("aut", "cre"),
+           email = "kan.dai@foxmail.com")
+Description: Collecting and transforming meteorological data resources,
+    such as map data, station information, topography data and so on.
+    reference, https://github.com/hadley/nasaweather
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1

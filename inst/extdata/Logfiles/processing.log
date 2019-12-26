@@ -1,0 +1,28 @@
+TRACE [2018-11-25 10:54:01] Logging to D:/DK_WORK_RCODE/data/dkDataResource/inst/extdata/Logfiles/processing.log
+TRACE [2018-11-25 10:54:01] Processing data
+TRACE [2018-11-25 10:54:01] Reading yaml configuration
+TRACE [2018-11-25 10:54:01] Found D:/DK_WORK_RCODE/data/dkDataResource/data-raw/surface_station_information.Rmd
+TRACE [2018-11-25 10:54:01] Processing 1 of 1: D:/DK_WORK_RCODE/data/dkDataResource/data-raw/surface_station_information.Rmd
+
+TRACE [2018-11-25 10:54:10] 1 data set(s) created by surface_station_information.Rmd
+TRACE [2018-11-25 10:54:10] NEWS.md file not found, creating!
+TRACE [2018-11-25 10:54:32] Saving to data
+TRACE [2018-11-25 10:54:34] Copied documentation to D:/DK_WORK_RCODE/data/dkDataResource/R/dkDataResource.R
+TRACE [2018-11-25 10:54:35] Done
+TRACE [2018-11-25 10:54:35] DataPackageR succeeded
+TRACE [2018-11-25 10:54:35] Building documentation
+TRACE [2018-11-25 10:54:38] Building package
+TRACE [2018-11-25 10:59:40] Logging to D:/DK_WORK_RCODE/data/dkDataResource/inst/extdata/Logfiles/processing.log
+TRACE [2018-11-25 10:59:40] Processing data
+TRACE [2018-11-25 10:59:40] Reading yaml configuration
+TRACE [2018-11-25 10:59:40] Found D:/DK_WORK_RCODE/data/dkDataResource/data-raw/surface_station_information.Rmd
+TRACE [2018-11-25 10:59:40] Processing 1 of 1: D:/DK_WORK_RCODE/data/dkDataResource/data-raw/surface_station_information.Rmd
+
+TRACE [2018-11-25 10:59:50] 1 data set(s) created by surface_station_information.Rmd
+TRACE [2018-11-25 10:59:50] Processed data sets match existing data sets at version 0.1.0
+TRACE [2018-11-25 10:59:50] Saving to data
+TRACE [2018-11-25 10:59:52] Copied documentation to D:/DK_WORK_RCODE/data/dkDataResource/R/dkDataResource.R
+TRACE [2018-11-25 10:59:54] Done
+TRACE [2018-11-25 10:59:54] DataPackageR succeeded
+TRACE [2018-11-25 10:59:54] Building documentation
+TRACE [2018-11-25 10:59:57] Building package
