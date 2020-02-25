@@ -1,13 +1,13 @@
 
-
 body {
-  font-family: Calibri, helvetica, sans-serif;
+  font-family: "Microsoft Yahei", Calibri, helvetica, sans-serif;
 }
 
 
 h1 {
   color: rgb(226, 192, 78);
-  font-size: 140%;
+  font-size: 150%;
+  margin-top: 84px;
 }
 
 .title {
@@ -16,16 +16,17 @@ h1 {
 
 h2 {
   color: rgb(112, 111, 111);
-  font-size: 130%;
+  font-size: 140%;
+  margin-top: 44px;
 }
 
 h3 {
-  font-size: 120%;
+  font-size: 130%;
   font-weight: bold;
 }
 
 h4 {
-  font-size: 110%;
+  font-size: 120%;
   font-weight: bold;
   font-style: italic;
 }
@@ -38,3 +39,13 @@ h4 {
   font-size: 500%;
   color: #00407d;
 }
+
+.caption {
+  font-size: 1.2em;
+  font-style: italic;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 10%;  
+  text-align: justify;
+}
+
