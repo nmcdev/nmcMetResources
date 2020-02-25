@@ -1,0 +1,48 @@
+---
+title: "NMC Data Analysis"
+author: "Kan Dai"
+date: "`r format(Sys.time(), '%Y, %b %d')`"
+output:
+    html_notebook:
+        toc: true
+        toc_depth: 3
+        toc_float: true
+        number_section: true
+        self_contained: yes
+        css: corp-styles.css
+        highlight: pygments
+        code_folding: show
+---
+
+<img src="nmc_large.png" style="position:absolute;top:10px;right:100px;" width ="100" height="100"/>
+<hr style="height:8px;">
+
+# Overview
+  
+
+# Environmental Setup
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+
+# Retrieve Data
+
+```{r warning=FALSE, message=FALSE}
+
+```
+
+# Prepare Data
+
+```{r warning=FALSE, message=FALSE}
+
+```
+
+# Explore and Visualization
+
+```{r warning=FALSE, message=FALSE, fig.width=12, fig.height=10}
+
+```
