@@ -12,4 +12,6 @@ Description: Collecting and transforming meteorological data resources,
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    rmarkdown
 RoxygenNote: 7.0.2
