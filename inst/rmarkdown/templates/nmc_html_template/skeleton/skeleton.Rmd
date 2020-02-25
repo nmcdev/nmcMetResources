@@ -1,0 +1,57 @@
+---
+title: "NMC Data Analysis Template"
+author: "[Kan Dai](https://github.com/nmcdev)"
+date: "`r format(Sys.time(), '%Y, %b %d')`"
+mail: "kan.dai@foxmail.com"
+twitter: "DAIkan90955637"
+github: "NMC-DAVE"
+home: "www.nmc.cn"
+output:
+  nmcMetResources::nmcHtmlTemp:
+    toc: TRUE
+    number_sections: FALSE
+    code_folding: "hide"
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# You need these libraries to run this template:
+library(tidyverse)
+library(DT)
+```
+
+<br><br><br><br>
+
+>Welcome in the [PCTG R Markdown template](https://github.com/holtzy/epuRate). This document describes how the template looks like, building an interactive Manhattan plot.
+
+
+
+# Loading data
+***
+Let's load a GWAS summary statistic stored in the [qqman library](https://github.com/stephenturner/qqman). This library is:
+
+- Made by Stephen Turner
+- Good to plot a quick Manhattan plot
+
+```{r, message=FALSE}
+
+```
+
+
+
+# Show data in a table
+***
+It's often handy to keep a trace of the raw data somewhere in your document. The DT library allows to build interactive tables that you can search, filter, highlight and more.
+```{r}
+
+```
+
+
+
+# Manhattan plot
+***
+Using `HTML` outputs you can embed some interactive graphics. For example, the plotly library can transform any of your ggplot2 graphic in an interactive chart:
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Libraries
+
+```
+

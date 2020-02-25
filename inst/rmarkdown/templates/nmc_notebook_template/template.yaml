@@ -1,0 +1,4 @@
+name: NMC Notebook
+description: >
+    R Notebook template for National Meteorological Center of CMA.
+create_dir: FALSE
