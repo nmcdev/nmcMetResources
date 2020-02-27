@@ -9,10 +9,12 @@ output:
     toc_float: true
     number_section: true
     self_contained: yes
-    css: !expr system.file("rmarkdown","templates","nmc_notebook_template","resources","corp-styles.css",package="nmcMetResources")
+    css: !expr system.file("rmarkdown","templates","nmc_notebook_template",
+           "resources","corp-styles.css",package="nmcMetResources")
     highlight: pygments
     includes:
-      after_body: !expr system.file("rmarkdown","templates","nmc_notebook_template","resources","footprint.html",package="nmcMetResources")
+      after_body: !expr system.file("rmarkdown","templates","nmc_notebook_template",
+                    "resources","footprint.html",package="nmcMetResources")
     code_folding: show
 ---
 
